@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NovaTransfernciaComponent } from './nova-transfencia/nova-transferencia.componente';
 import { DEFAULT_CURRENCY_CODE, LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -13,7 +14,7 @@ registerLocaleData(localept, 'pt');
 
 @NgModule({
   declarations: [AppComponent, NovaTransfernciaComponent, ExtratoComponent],
-  imports: [BrowserModule, AppRoutingModule, FormsModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [
     { provide: LOCALE_ID, useValue: 'pt' },
     {
